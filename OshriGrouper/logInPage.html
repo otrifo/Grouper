@@ -1,0 +1,50 @@
+<div class="logInPage">
+    <md-content>
+        <div class="registretion">
+            Click to subscribe
+            <md-button class="registration" ng-click="showAdvanced($event)"> Registration </md-button>
+        </div>
+    </md-content>
+    <md-content flex>
+        <div layout-gt-sm="row" class="userSearch">
+            <md-input-container flex-gt-sm>
+                <label>interests</label>
+                <md-select ng-model="userSelect.interest">
+                    <md-option ng-repeat="interest in interests" >
+                        {{interest.interest}} </md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container flex-gt-sm>
+                <label>radios</label>
+                <md-select ng-model="userSelect.radios">
+                    <md-option ng-repeat="radios in radioss">
+                        {{radios.radios}} </md-option>
+                </md-select>
+            </md-input-container>
+            <md-button href="#/searchResults" ng-click="saveData(interest,radios)"> search </md-button>
+        </div>
+    </md-content>
+    <md-contact>
+        <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
+            <md-button flex="50" class="md-primary md-raised" ng-click="showGridBottomSheet($event)">Contact Us</md-button>
+        </div>
+    </md-contact>
+    <script type="text/ng-template" id="contactUs.html">
+        <md-bottom-sheet class="md-grid" layout="column" ng-cloak>
+            <div layout="row" layout-align="center center">
+                <h4>With clickOutsideToClose option, drag down or press ESC to close</h4>
+            </div>
+            <div>
+                <md-list flex layout="row" layout-align="center center">
+                    <md-list-item ng-repeat="item in items">
+
+                        <md-button class="md-grid-item-content" ng-click="listItemClick($index)">
+                            <md-icon md-svg-src="{{item.icon}}"></md-icon>
+                            <div class="md-grid-text"> {{ item.name }} </div>
+                        </md-button>
+
+                    </md-list-item>
+                </md-list>
+            </div>
+        </md-bottom-sheet>
+</div>
