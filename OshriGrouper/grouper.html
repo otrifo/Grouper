@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css" href="css/grouperCSS.css">
+</head>
+
+<body ng-app="grouper" layout="column">
+    <md-toolbar class="toolbar" layout="row" ng-controller="toolBar">
+        <md-button class="menu" ng-click="openLeftMenu()" class="md-primary" hide-gt-sm>
+            <md-icon md-svg-src="./img/camera119.svg"></md-icon>
+        </md-button>
+        <span flex="30"></span>
+        <img src="img/logo.png" alt="Groper start app">
+    </md-toolbar>
+    <div layout="row" flex>
+        <md-sidenav class="md-whiteframe-z2 md-sidenav-left" layuot="column" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" flex="20">
+            <md-toolbar class="md-tall md-hue-2">
+                <div layuit="column" class="md-toolbar-tools-bottom inset">
+                    <img src="./img/user7.svg">
+                    <span></span>
+                    <div>First name / nickName</div>
+                    <div>Email / status</div>
+                </div>
+            </md-toolbar>
+            <md-subheader>
+                box one
+            </md-subheader>
+            <md-list>
+                <md-item>
+                    <a>
+                        <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                            <div class="inset">
+                                <md-icon md-svg-src="./img/googlePlus.svg"></md-icon>
+                            </div>
+                            <div class="inset">My account</div>
+                        </md-item-content>
+                    </a>
+                </md-item>
+                <md-item>
+                    <a>
+                        <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                            <div class="inset">
+                                <md-icon md-svg-src="./img/facebook2.svg"></md-icon>
+                            </div>
+                            <div class="inset">My groups</div>
+                        </md-item-content>
+                    </a>
+                </md-item>
+                <md-item>
+                    <a>
+                        <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                            <div class="inset">
+                                <md-icon md-svg-src="./img/twitter.svg"></md-icon>
+                            </div>
+                            <div class="inset">Notifications</div>
+                        </md-item-content>
+                    </a>
+                </md-item>
+                <md-divider></md-divider>
+                <md-subheader>
+                    box two
+                </md-subheader>
+                <md-item>
+                    <a>
+                        <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                            <div class="inset">
+                                <md-icon md-svg-src="img/settings.svg"></md-icon>
+                            </div>
+                            <div class="inset">Settings</div>
+                        </md-item-content>
+                    </a>
+                </md-item>
+                <md-item>
+                    <a>
+                        <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                            <div class="inset">
+                                <md-icon md-svg-src="./img/contactUs.svg"></md-icon>
+                            </div>
+                            <div class="inset">Contact Us</div>
+                    </a>
+                    </md-button>
+                    </md-list-item>
+                </md-item>
+            </md-list>
+        </md-sidenav>
+        <md-content layuot="column" flex>
+            <div class="heder" flex="50">
+                <h2>Welcome to Grouper app</h2>
+                <p>this is test for angular {{7+8}}</p>
+            </div>
+            <div class="middle" flex="50" layout="column" layout-align="center center" ng-view></div>
+        </md-content>
+    </div>
+    <script src='node_modules/lodash/lodash.js'></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="node_modules/angular-material/angular-material.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src='node_modules/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
+    <script src='node_modules/angular-google-maps/dist/angular-google-maps.min.js'></script>
+    <!-- Modules -->
+    <script src="script/script.js"></script>
+    <!--Controllers-->
+    <script src="script/Controllers.js"></script>
+    <!--Directives-->
+    <script src="script/directives.js"></script>
+    <!--Services -->
+    <script src="script/services.js"></script>
+
+</body>
+
+</html>

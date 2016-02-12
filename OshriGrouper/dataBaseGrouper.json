@@ -1,0 +1,42 @@
+[
+    {
+        "firstName": "Avi",
+        "lastName": "Cohen",
+        "adress": "Aluf David 101",
+        "city": "Ramat gan",
+        "email": "Avi@gmail.com",
+        "intrest": "Football"
+  },
+    {
+        "firstName": "Dani",
+        "lastName": "Levi",
+        "adress": "Dizengoff 99",
+        "city": "Tel aviv",
+        "email": "Dani@gmail.com",
+        "intrest": "Runnig"
+  },
+    {
+        "firstName": "Yosi",
+        "lastName": "Ben david",
+        "adress": "Mordehai Narkis 7",
+        "city": "Jerusalem",
+        "email": "Yosi@gmail.com",
+        "intrest": "Football"
+  },
+    {
+        "firstName": "Mor",
+        "lastName": "Elner",
+        "adress": "HaBitahon 4",
+        "city": "Qiryat Ono",
+        "email": "Mor@gmail.com",
+        "intrest": "Yoga"
+  },
+    {
+        "firstName": "Keren",
+        "lastName": "Hefner",
+        "adress": "Megido 25",
+        "city": "Haifa",
+        "email": "Keren@gmail.com",
+        "intrest": "Tenis"
+  }
+]

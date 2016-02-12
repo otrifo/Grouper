@@ -1,0 +1,75 @@
+<md-dialog aria-label="Registration dialog" ng-cloak class="inputdemoErrors">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Grouper registration</h2>
+            <span flex></span>
+            <md-button class="toolbarRegistColseBtn" ng-click="cancel()">
+                <md-icon md-svg-src="./img/cross102.svg" aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <div class="md-dialog-content inputdemoErrors">
+            <form name="registration">
+                <div>
+                    <md-input-container>
+                        <label>First Name</label>
+                        <input required="" name="firstName" ng-model="userInsert.firstName">
+                        <div ng-messages="registration.firstName.$error">
+                            <div ng-message="required">This is required.</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Last Name</label>
+                        <input required="" name="lastName" ng-model="userInsert.lastName">
+                        <div ng-messages="registration.lastName.$error">
+                            <div ng-message="required">This is required.</div>
+                        </div>
+                    </md-input-container>
+                </div>
+                <div>
+                    <md-input-container>
+                        <label>Adress</label>
+                        <input required="" name="adress" ng-model="userInsert.adress">
+                        <div ng-messages="registration.adress.$error">
+                            <div ng-message="required">This is required.</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container>
+                        <label>City</label>
+                        <input required="" name="city" ng-model="userInsert.city">
+                        <div ng-messages="registration.city.$error">
+                            <div ng-message="required">This is required.</div>
+                        </div>
+                    </md-input-container>
+                </div>
+                <md-input-container>
+                    <label>Email</label>
+                    <input required="" type="email" name="Email" ng-model="userInsert.Email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                    <div ng-messages="registration.clientEmail.$error" role="alert">
+                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                            Your email must be between 10 and 100 characters long and look like an e-mail address.
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>interests</label>
+                    <md-select name="Interest" ng-model="userInsert.interests">
+                        <md-option ng-repeat="userInterest in userInterests" value="{{userInterest.abbrev}}">
+                            {{userInterest.abbrev}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </form>
+        </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+        <span flex></span>
+        <md-button ng-click="answer('not useful')">
+            Clear all
+        </md-button>
+        <md-button style="margin-right:20px;">
+            Registration
+        </md-button>
+    </md-dialog-actions>
+</md-dialog>
